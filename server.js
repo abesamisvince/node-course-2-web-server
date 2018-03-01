@@ -45,6 +45,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Portfolio',
+        welcomeMessage: 'This is my portfolio'
+    });
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/bad', (req, res) => {
